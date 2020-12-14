@@ -1,115 +1,52 @@
-@media screen and (-webkit-max-device-pixel-ratio: 1) {
-    .preload * {
-        transition: none !important;
-        -webkit-transition: none !important;
-        -moz-transition: none !important;
-        -ms-transition: none !important;
-        -o-transition: none !important;
-    }
-    body {
-        background-color: black !important;
-    }
-    #canvasContainer {
-        position: absolute;
-        margin: auto;
-        width: 100%;
-        height: 95%;
-        left: 0;
-    }
-    #visualizer_render {
-        position: relative;
-        background-image: radial-gradient(circle, rgb(90, 0, 0), rgb(60, 0, 0), rgb(30, 0, 0), black, black, black, black, black, black);
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-    }
-    .visualizerControlsContainer {
-        position: relative;
-        margin: auto;
-        bottom: 100px;
-        width: 90%;
-        height: 50px;
-        z-index: 2;
-        color: white;
-    }
-    .inversePair {
-        border: 1px solid black;
-        display: inline-block;
-        position: relative;
-        text-align: center;
-        line-height: 50px;
-        vertical-align: top;
-        bottom: 100%;
-    }
-    @media screen and (max-width:450px) {
-        #a {
-            height: 100px;
-            width: 100px;
-            border-radius: 100px;
-            background: rgba(99, 99, 99, 0.25);
-            z-index: 1;
-            position: relative;
-            bottom: 25px;
-            text-align: center;
-            align-content: center;
-        }
-        #b {
-            width: 0px !important;
-            height: 50px;
-            /* need to play with margin/padding adjustment
-               based on your desired "gap" */
-            padding-left: 75px;
-            margin-left: -5px;
-            /* real borders */
-            border-left: none;
-            -webkit-border-top-right-radius: 20px;
-            -webkit-border-bottom-right-radius: 20px;
-            -moz-border-radius-topright: 20px;
-            -moz-border-radius-bottomright: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-            /* the inverse circle "cut" */
-            background-image: -moz-radial-gradient( -50px 50%, /* the -23px left position varies by your "gap" */
-            circle closest-corner, /* keep radius to half height */
-            transparent 0, /* transparent at center */
-            transparent 55px, /*transparent at edge of gap */
-            black 56px, /* start circle "border" */
-            rgba(99, 99, 99, 0.25) 57px/* end circle border and begin color of rest of background */
-            );
-            background-image: -webkit-radial-gradient(-50px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
-            background-image: -ms-radial-gradient(-50px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
-            background-image: -o-radial-gradient(-50px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
-            background-image: radial-gradient(-50px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
-        }
-        #c {
-            height: 50px;
-            width: 0px !important;
-            /* need to play with margin/padding adjustment
-               based on your desired "gap" */
-            padding-right: 75px;
-            margin-right: -5px;
-            /* real borders */
-            border-right: none;
-            -webkit-border-top-left-radius: 20px;
-            -webkit-border-bottom-left-radius: 20px;
-            -moz-border-radius-topleft: 20px;
-            -moz-border-radius-bottomleft: 20px;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-            /* the inverse circle "cut" */
-            background-image: -moz-radial-gradient( 125px 50%, /* the -23px left position varies by your "gap" */
-            circle closest-corner, /* keep radius to half height */
-            transparent 0, /* transparent at center */
-            transparent 110px, /*transparent at edge of gap */
-            black 112px, /* start circle "border" */
-            rgba(99, 99, 99, 0.25) 114px/* end circle border and begin color of rest of background */
-            ) !important;
-            background-image: -webkit-radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
-            background-image: -ms-radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
-            background-image: -o-radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
-            background-image: radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
-        }
-    }
+.preload * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+body {
+    background-color: black !important;
+}
+
+#canvasContainer {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 95%;
+    left: 0;
+}
+
+#visualizer_render {
+    position: relative;
+    background-image: radial-gradient(circle, rgb(90, 0, 0), rgb(60, 0, 0), rgb(30, 0, 0), black, black, black, black, black, black);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.visualizerControlsContainer {
+    position: relative;
+    margin: auto;
+    bottom: 100px;
+    width: 90%;
+    height: 50px;
+    z-index: 2;
+    color: white;
+}
+
+.inversePair {
+    border: 1px solid black;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: top;
+    bottom: 100%;
+}
+
+@media screen and (max-width:450px) {
     #a {
         height: 100px;
         width: 100px;
@@ -125,7 +62,7 @@
         width: 0px !important;
         height: 50px;
         /* need to play with margin/padding adjustment
-           based on your desired "gap" */
+               based on your desired "gap" */
         padding-left: 75px;
         margin-left: -5px;
         /* real borders */
@@ -153,7 +90,7 @@
         height: 50px;
         width: 0px !important;
         /* need to play with margin/padding adjustment
-           based on your desired "gap" */
+               based on your desired "gap" */
         padding-right: 75px;
         margin-right: -5px;
         /* real borders */
@@ -177,11 +114,82 @@
         background-image: -o-radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
         background-image: radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
     }
-    #playButton {
-        font-size: 75px;
-        border: none;
-        line-height: 1.25;
-        color: white;
-        background-color: transparent;
-    }
+}
+
+#a {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    background: rgba(99, 99, 99, 0.25);
+    z-index: 1;
+    position: relative;
+    bottom: 25px;
+    text-align: center;
+    align-content: center;
+}
+
+#b {
+    width: 0px !important;
+    height: 50px;
+    /* need to play with margin/padding adjustment
+           based on your desired "gap" */
+    padding-left: 75px;
+    margin-left: -5px;
+    /* real borders */
+    border-left: none;
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-radius-topright: 20px;
+    -moz-border-radius-bottomright: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* the inverse circle "cut" */
+    background-image: -moz-radial-gradient( -50px 50%, /* the -23px left position varies by your "gap" */
+    circle closest-corner, /* keep radius to half height */
+    transparent 0, /* transparent at center */
+    transparent 55px, /*transparent at edge of gap */
+    black 56px, /* start circle "border" */
+    rgba(99, 99, 99, 0.25) 57px/* end circle border and begin color of rest of background */
+    );
+    background-image: -webkit-radial-gradient(-50px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
+    background-image: -ms-radial-gradient(-50px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
+    background-image: -o-radial-gradient(-50px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
+    background-image: radial-gradient(-50px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
+}
+
+#c {
+    height: 50px;
+    width: 0px !important;
+    /* need to play with margin/padding adjustment
+           based on your desired "gap" */
+    padding-right: 75px;
+    margin-right: -5px;
+    /* real borders */
+    border-right: none;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* the inverse circle "cut" */
+    background-image: -moz-radial-gradient( 125px 50%, /* the -23px left position varies by your "gap" */
+    circle closest-corner, /* keep radius to half height */
+    transparent 0, /* transparent at center */
+    transparent 110px, /*transparent at edge of gap */
+    black 112px, /* start circle "border" */
+    rgba(99, 99, 99, 0.25) 114px/* end circle border and begin color of rest of background */
+    ) !important;
+    background-image: -webkit-radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
+    background-image: -ms-radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
+    background-image: -o-radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
+    background-image: radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
+}
+
+#playButton {
+    font-size: 75px;
+    border: none;
+    line-height: 1.25;
+    color: white;
+    background-color: transparent;
 }
