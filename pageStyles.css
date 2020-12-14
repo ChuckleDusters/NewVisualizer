@@ -47,6 +47,7 @@ body {
 }
 
 #playButton {
+    position: absolute;
     font-size: 75px;
     border: none;
     line-height: 1.4;
