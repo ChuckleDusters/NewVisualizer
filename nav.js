@@ -1,4 +1,4 @@
-window.addEventListener('resize', function(event) {
+window.addEventListener('resize', function (event) {
   opencloseNav();
   opencloseNav();
 });
@@ -6,7 +6,7 @@ window.addEventListener('resize', function(event) {
 function opencloseNav() {
   vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
   vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-  if (vw > 450 && vh > 450) {
+  if (vw > 500 && vh > 500) {
     if (document.getElementById("openclosemenu").innerHTML != "☰ Open Menu") {
       document.getElementById("mySidebar").style.width = "0px";
       document.getElementById("openclosemenu").style.width = "191px";
@@ -26,13 +26,19 @@ function opencloseNav() {
       document.getElementById("openclosemenu").innerHTML = "☰ Close Menu";
     }
   } else {
+    if (vh < 500) {
+      document.getElementById("openclosemenu").style.top = "40%";
+
+    } else {
+      document.getElementById("openclosemenu").style.top = "25%";
+
+    }
     if (document.getElementById("openclosemenu").innerHTML != "☰ Open Menu") {
       document.getElementById("mySidebar").style.width = "0px";
       document.getElementById("openclosemenu").style.left = "-70px";
       document.getElementById("openclosemenu").style.width = "191px";
       document.getElementById("openclosemenu").style.transform = "rotate(90deg)";
       document.getElementById("openclosemenu").style.borderBottom = "50px solid rgba(99, 99, 99, 0.25)";
-      document.getElementById("openclosemenu").style.top = "25%";
       document.getElementById("openclosemenu").style.fontSize = "20px";
       document.getElementById("openclosemenu").style.lineHeight = "2.5";
       document.getElementById("openclosemenu").innerHTML = "☰ Open Menu";
@@ -42,7 +48,6 @@ function opencloseNav() {
       document.getElementById("mySidebar").style.width = vw + "px";
       document.getElementById("openclosemenu").style.left = vw - 120 + "px";
       document.getElementById("openclosemenu").style.transform = "rotate(270deg)";
-      document.getElementById("openclosemenu").style.top = "25%";
       document.getElementById("openclosemenu").style.fontSize = "20px";
       document.getElementById("openclosemenu").style.lineHeight = "2.5";
       document.getElementById("openclosemenu").innerHTML = "☰ Close Menu";
