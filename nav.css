@@ -1,74 +1,4 @@
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgba(99, 99, 99, 0.25);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.openbtn {
-  line-height: 2.5;
-  background-color: transparent;
-  position: fixed;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-  border: none;
-  top: 50%;
-  left: -70px;
-  z-index: 2;
-  border-bottom: 50px solid rgba(99, 99, 99, 0.25);
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  height: 0;
-  width: 191px;
-  transform: rotate(90deg);
-  transition: 0.5s;
-}
-
-.openbtn:hover {
-  border-bottom: 50px solid rgba(175, 175, 175, 0.25);
-}
-
-.openbtn:focus {
-  outline: none;
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width:450px) {
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
   .sidebar {
     height: 100%;
     width: 0;
@@ -79,12 +9,12 @@
     background-color: rgba(99, 99, 99, 0.25);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 32px;
+    padding-top: 60px;
   }
   .sidebar a {
-    padding: 8px 8px 8px 20px;
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     display: block;
     transition: 0.3s;
@@ -100,7 +30,7 @@
     cursor: pointer;
     color: white;
     border: none;
-    top: 25%;
+    top: 50%;
     left: -70px;
     z-index: 2;
     border-bottom: 50px solid rgba(99, 99, 99, 0.25);
@@ -109,7 +39,7 @@
     height: 0;
     width: 191px;
     transform: rotate(90deg);
-    transition: 0.3s;
+    transition: 0.5s;
   }
   .openbtn:hover {
     border-bottom: 50px solid rgba(175, 175, 175, 0.25);
@@ -120,5 +50,68 @@
   #main {
     transition: margin-left .5s;
     padding: 16px;
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width:450px) {
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgba(99, 99, 99, 0.25);
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 32px;
+    }
+    .sidebar a {
+      padding: 8px 8px 8px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    .openbtn {
+      line-height: 2.5;
+      background-color: transparent;
+      position: fixed;
+      font-size: 20px;
+      cursor: pointer;
+      color: white;
+      border: none;
+      top: 25%;
+      left: -70px;
+      z-index: 2;
+      border-bottom: 50px solid rgba(99, 99, 99, 0.25);
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      height: 0;
+      width: 191px;
+      transform: rotate(90deg);
+      transition: 0.3s;
+    }
+    .openbtn:hover {
+      border-bottom: 50px solid rgba(175, 175, 175, 0.25);
+    }
+    .openbtn:focus {
+      outline: none;
+    }
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
   }
 }
