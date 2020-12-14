@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pageStyles.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>[TITLE] - Free Audio Visualizer</title>
+</head>
+
+<body class="preload" onload="initPage()">
+    <div id="mySidebar" class="sidebar">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" id="openclosemenu" onclick="opencloseNav()">☰ Open Menu</button>
+    </div>
+    <div id="canvasContainer">
+        <canvas id="visualizer_render"></canvas>
+        <div class="visualizerControlsContainer">
+            <center>
+                <div id="c" class="inversePair"></div>
+                <div id="a" class="inversePair">
+                    <button id="playButton" class="text-gradient"><i class="far fa-play-circle"></i></button>
+                </div>
+                <div id="b" class="inversePair"></div>
+            </center>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="nav.js"></script>
+<script type="text/javascript" src="pageScripts.js"></script>
+<script src="https://kit.fontawesome.com/84f456c0e5.js" crossorigin="anonymous"></script>
+
+</html>
