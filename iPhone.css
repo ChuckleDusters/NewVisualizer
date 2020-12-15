@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+
+.iPhone_Warning {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    border-radius: 50px;
+    color: black;
+    background-color: darkgray;
+}
+
+#bigWarn {
+    font-size: 25px;
+    color: darkred;
+    font-weight: bolder;
+    line-height: 2;
+}
+
+#date {
+    font-size: 18px;
+    font-weight: bold;
+}
