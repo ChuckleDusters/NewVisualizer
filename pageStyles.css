@@ -170,9 +170,3 @@ body {
         background-image: radial-gradient(125px 50%, circle closest-corner, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 55px, black 56px, rgba(99, 99, 99, 0.25) 57px);
     }
 }
-
-@media only screen and (device-width:not(width)) {
-    #playButton {
-        right: 25%;
-    }
-}
